@@ -28,7 +28,7 @@
       @apply px-16 py-4 bg-[#E1B168]
     }
     .btn-border {
-      @apply px-16 py-4 border-[1px] border-[#E1B168]
+      @apply px-12 py-4 border-[1px] border-[#E1B168] hover:shadow-md hover:shadow-amber-500 cursor-pointer
     }
     .normal-text {
       @apply text-[20px] font-normal

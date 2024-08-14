@@ -13,13 +13,16 @@ import Slider2 from "../../uitls/Slider/Slider2";
 import LeftSideButton from "../../uitls/Button/LeftSideButton/LeftSideButton";
 import ProgressBar from "../../uitls/progressBar/ProgressBar";
 import Reservation from "../../Components/Reservation/Reservation";
+import { Link } from "react-router-dom";
 const iconList = [
   { icon: <FaInstagram />, path: "#" },
   { icon: <FaFacebookF />, path: "#" },
   { icon: <FaTwitter />, path: "#" },
   { icon: <FaLinkedinIn />, path: "#" },
 ];
+
 const OurSafe = () => {
+  
   return (
     <section className=" max-w-7xl mx-auto h-full text-white ">
       <MenuTitle title={"Our Chefs"} />
@@ -30,10 +33,13 @@ const OurSafe = () => {
           <div className=" w-full  flex flex-col justify-center items-center   sm:grid sm:grid-cols-3 sm:w-[900px] gap-4 sm:px-16">
             {team2.map((item) => (
               <div key={item.id} className=" flex-center group relative">
-                <img
+               <Link to={`/singleChefs/${item.id}`}>
+               <img
                   className=" cursor-pointer h-[300px] sm:h-[350px]"
-                  src={item.photo}
+                  src={item.photo1}
                 />
+               </Link>
+                
                 <div className=" hidden bg-black absolute bottom-[70px] w-full h-[40px] mx-auto group-hover:flex  justify-center items-center">
                   {iconList.map((icon) => (
                     <div
@@ -77,6 +83,7 @@ const OurSafe = () => {
           />
         </aside>
       </div>
+      
       <Reservation />
     </section>
   );

@@ -25,6 +25,12 @@ import s4 from '../assets/s4.svg';
 import icon1 from '../assets/Icon1.svg';
 import icon2 from '../assets/Icon2.svg';
 import icon3 from '../assets/Icon3.svg';
+import icon4 from '../assets/Vector (1).svg';
+import icon5 from '../assets/Vector (2).svg';
+import icon6 from '../assets/Location.svg';
+import icon7 from '../assets/Call.svg';
+
+
 import blog1 from '../assets/blog1.svg';
 import blog2 from '../assets/blog2.jpeg';
 import josif from '../assets/josef.svg';
@@ -38,13 +44,26 @@ import picon3 from '../assets/picon3.svg';
 import picon4 from '../assets/picon4.svg';
 import pbanner from '../assets/productsBanner.svg';
 // chefs
-import safe1 from '../assets/safe/safe1.svg';
-import safe2 from '../assets/safe/safe2.svg';
-import safe3 from '../assets/safe/safe3.svg';
-import safe4 from '../assets/safe/safe4.svg';
-import safe5 from '../assets/safe/3.svg';
-import safe6 from '../assets/safe/3.svg';
+import safe1 from '../assets/safe/Photo (3).jpeg';
+import safe2 from '../assets/safe/Photo (3).jpeg';
+import safe3 from '../assets/safe/Photo (19).svg';
+import safe4 from '../assets/safe/Photo (20).svg';
+import safe5 from '../assets/safe/Photo (17).svg';
+import safe6 from '../assets/safe/Photo (21).svg';
+import safe7 from '../assets/safe/safe1.svg';
+import safe8 from '../assets/safe/safe2.svg';
+import safe9 from '../assets/safe/safe3.svg';
+import safe10 from '../assets/safe/safe4.svg';
+import safe11 from '../assets/safe/3.svg';
+import safe12 from '../assets/safe/safe1.svg';
 
+// icon
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 import light from '../assets/light.svg';
 import quate1 from '../assets/qqqq.svg';
 import photo1 from '../assets/Photo5.svg';
@@ -58,7 +77,29 @@ import main from "../assets/mainDisg.svg"
 import mainbnr from "../assets/mbnr.svg"
 import dessert from "../assets/Photo (12).svg"
 import chefsb from "../assets/Photo (16).svg"
+import prom from "../assets/Photo (22).svg"
+import pic1 from "../assets/Photo (23).svg"
+import pic2 from "../assets/Photo (24).svg"
+import pic3 from "../assets/Photo (25).svg"
+import pic4 from "../assets/Photo (26).svg"
+import pic5 from "../assets/Photo (27).svg"
+import pic6 from "../assets/Photo (28).svg"
+import gall1 from "../assets/Photo (30).svg"
+import gall2 from "../assets/Photo (31).svg"
+import singG32 from "../assets/Photo (32).svg"
+import singG33 from "../assets/Photo (33).svg"
+import singG34 from "../assets/Photo (34).svg"
 
+import rbanr from "../assets/reservationBanner.svg"
+// gallary
+export const gallary1 = pic1;
+export const gallary2 = pic2;
+export const gallary3 = pic3;
+export const gallary4 = pic4;
+export const gallary5 = pic5;
+export const gallary6 = pic6;
+export const gallary7 = gall1;
+export const gallary8 = gall2;
 // Photos 
 export const light1 = light;
 export const backgroundImage = b1;
@@ -83,8 +124,12 @@ export const mainD = main;
 export const mainbnr1 = mainbnr;
 export const dessertp = dessert;
 export const chefsp = chefsb;
-
-
+export const icon04= icon4
+export const icon05= icon5
+export const icon06= icon6
+export const icon07= icon7
+export const promoBnr= prom 
+export const reservationBanner= rbanr 
 
 
 
@@ -125,6 +170,7 @@ export const workingHour = [
 {
   id:1,
   photo:p1,
+
   title:"Raw Scallops from Erquy",
   details:'Candied Jerusalem artichokes, truffle',
   price:'$40'
@@ -378,38 +424,116 @@ export const workingHour = [
   {
     id:1,
     photo:safe1,
+    photo1:safe7,
     name:'Avroko',
-    job:'Master Chef'
+    job:'Master Chef',
+    job:'Master Chef',
+    experience:'10 Years of Expereince',
+    mail:'evanmattew@mail.com',
+    contact:'800-234-567',
+    locate:"'Riverside 25, San Francisco, California",
+    time:'Mon To Fri 9:00 AM - 9:00 PM',
+    details:'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divid with additional clickthroughs from Nanotechnology immersion along the information highway will close the loop on focusing solely the bottom line.'
   },
   {
     id:2,
     photo:safe2,
+    photo1:safe8,
     name:'Evan Mattew',
-    job:'Master Chef'
+    job:'Master Chef',
+    experience:'10 Years of Expereince',
+    mail:'evanmattew@mail.com',
+    contact:'800-234-567',
+    locate:"'Riverside 25, San Francisco, California",
+    time:'Mon To Fri 9:00 AM - 9:00 PM',
+    details:'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divid with additional clickthroughs from Nanotechnology immersion along the information highway will close the loop on focusing solely the bottom line.'
   },
   {
     id:3,
     photo:safe3,
+    photo1:safe9,
     name:'Diane	Clarkson',
-    job:'Master Chef'
+    job:'Master Chef',
+    experience:'20 Years of Expereince',
+    mail:'evanmattew@mail.com',
+    contact:'800-234-567',
+    locate:"'Riverside 25, San Francisco, California",
+    time:'Mon To Fri 9:00 AM - 9:00 PM',
+    details:'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divid with additional clickthroughs from Nanotechnology immersion along the information highway will close the loop on focusing solely the bottom line.'
   },
   {
     id:4,
     photo:safe4,
+    photo1:safe10,
     name:'Dan Rafalin',
-    job:'Assistant Chef'
+    job:'Assistant Chef',
+    experience:'10 Years of Expereince',
+    mail:'evanmattew@mail.com',
+    contact:'800-234-567',
+    locate:"'Riverside 25, San Francisco, California",
+    time:'Mon To Fri 9:00 AM - 9:00 PM',
+    details:'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divid with additional clickthroughs from Nanotechnology immersion along the information highway will close the loop on focusing solely the bottom line.'
   },
   {
     id:5,
     photo:safe5,
+    photo1:safe11,
     name:'Dan Rafalin',
-    job:'Assistant Chef'
+    job:'Assistant Chef',
+    experience:'10 Years of Expereince',
+    mail:'evanmattew@mail.com',
+    contact:'800-234-567',
+    locate:"'Riverside 25, San Francisco, California",
+    time:'Mon To Fri 9:00 AM - 9:00 PM',
+    details:'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divid with additional clickthroughs from Nanotechnology immersion along the information highway will close the loop on focusing solely the bottom line.'
   },
   {
     id:6,
     photo:safe6,
+    photo1:safe12,
     name:'Dan Rafalin',
-    job:'Assistant Chef'
+    job:'Assistant Chef',
+    experience:'10 Years of Expereince',
+    mail:'evanmattew@mail.com',
+    contact:'800-234-567',
+    locate:"'Riverside 25, San Francisco, California",
+    time:'Mon To Fri 9:00 AM - 9:00 PM',
+    details:'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divid with additional clickthroughs from Nanotechnology immersion along the information highway will close the loop on focusing solely the bottom line.'
   },
   
  ]
+export const singleGallary=[
+{
+  id:1,
+  photo:singG32,
+  title:'Italian Pasta',
+  par:'Typical spaghetti is made from water, milled wheat, and flour, but authentic spaghetti is made with durum wheat semolina.',
+par2:"Spaghetti is Italy's classic pasta that is known for its long, thin, cylindrical shape.",
+category: "Main Courses",
+date: "October 20, 2023",
+tags: "Recipes, Sweet, Tasty",
+
+},
+{
+  id:2,
+  photo:singG33,
+  title:'Stuffed Pasta',
+  par:'Typical spaghetti is made from water, milled wheat, and flour, but authentic spaghetti is made with durum wheat semolina.',
+par2:"Spaghetti is Italy's classic pasta that is known for its long, thin, cylindrical shape.",
+category: "Main Courses",
+date: "October 20, 2023",
+tags: "Recipes, Sweet, Tasty",
+
+},
+{
+  id:3,
+  photo:singG34,
+  title:'Tubular Pasta',
+  par:'Typical spaghetti is made from water, milled wheat, and flour, but authentic spaghetti is made with durum wheat semolina.',
+par2:"Spaghetti is Italy's classic pasta that is known for its long, thin, cylindrical shape.",
+category: "Main Courses",
+date: "October 20, 2023",
+tags: "Recipes, Sweet, Tasty",
+
+},
+]

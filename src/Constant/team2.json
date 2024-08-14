@@ -1,0 +1,42 @@
+  {
+   "team2":[
+
+    {
+      "id":1,
+      "photo":"safe1",
+      "name":"Avroko'",
+      "job":"Master Chef'"
+    },
+    {
+      "id":2,
+      "photo":"safe2",
+
+      "name":"Evan Mattew",
+      "job": "'Master Chef"
+    },
+    {
+      "id":3,
+      "photo":"safe3",
+      "name": "Diane Clarkson",
+      "job": "Master Che"
+    },
+    {
+      "id":4,
+      "photo":"safe4",
+      "name": "Dan Rafalin",
+      "job": "Assistant Chef"
+    },
+    {
+      "id":5,
+      "photo":"safe5",
+      "name": "Dan Rafalin",
+      "job": "Assistant Chef"
+    },
+    {
+      "id":6,
+      "photo":"safe6",
+      "name":"Dan Rafalin'",
+      "job":"Assistant Chef"
+    }
+  ]
+  }
