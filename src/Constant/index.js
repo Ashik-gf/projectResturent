@@ -58,12 +58,7 @@ import safe11 from '../assets/safe/3.svg';
 import safe12 from '../assets/safe/safe1.svg';
 
 // icon
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+
 import light from '../assets/light.svg';
 import quate1 from '../assets/qqqq.svg';
 import photo1 from '../assets/Photo5.svg';
@@ -89,6 +84,13 @@ import gall2 from "../assets/Photo (31).svg"
 import singG32 from "../assets/Photo (32).svg"
 import singG33 from "../assets/Photo (33).svg"
 import singG34 from "../assets/Photo (34).svg"
+import store35 from "../assets/Photo (35).svg"
+import store36 from "../assets/Photo (36).svg"
+import store37 from "../assets/Photo (37).svg"
+import store38 from "../assets/Photo (38).svg"
+import store39 from "../assets/Photo (39).svg"
+import store40 from "../assets/Photo (38).svg"
+
 
 import rbanr from "../assets/reservationBanner.svg"
 // gallary
@@ -536,4 +538,31 @@ date: "October 20, 2023",
 tags: "Recipes, Sweet, Tasty",
 
 },
+]
+export const store=[
+  {
+    id:1,
+    photo:store35,
+  },
+  {
+    id:2,
+    photo:store36,
+  },
+  {
+    id:3,
+    photo:store38,
+  },
+  {
+    id:4,
+    photo:store37,
+  },
+  {
+    id:6,
+    photo:store40,
+  },
+  {
+    id:5,
+    photo:store39,
+  },
+  
 ]
