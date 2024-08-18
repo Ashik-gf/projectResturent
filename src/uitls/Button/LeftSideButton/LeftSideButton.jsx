@@ -8,8 +8,7 @@ const LeftSideButton = ({className,title, subject, paragraph, children}) => {
     </div>
     <div className= {`sm:max-w-[500px] flex flex-col  py-4 ${className}`} >
     <h1 className={`font-cormo text-[35px] py-2 font-semibold text-[#292E36] ${className}`}>{subject}</h1>
-    <h1 className={`font-cormo text-[35px] py-2 font-semibold text-[#292E36] ${className}`}>{children}</h1>
-
+    <h1 className={`font-cormo text-[35px] py-[1px] font-semibold text-[#292E36] ${className}`}>{children}</h1>
       <p className= {` text-justify font-jos text-[20px] font-normal text-[#555555] ${className}`} >{paragraph}</p>
     </div>
    

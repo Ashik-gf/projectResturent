@@ -1,7 +1,7 @@
 import logoimg from "../../assets/logo.svg";
 import { BsCart2 } from "react-icons/bs";
 import { navList } from "../../Constant";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
@@ -25,9 +25,9 @@ const Header = () => {
           </div>
         </div>
 {/* logo */}
-        <div className="col-span-1 flex-center ">
+        <div className="col-span-1 flex-center py-4 ">
           <img
-            className=" h-[100px]  py-4 md:h-[180px] lg:h-[280px] lg:w-[300px] "
+            className=" border-[1px] border-dashed divide-x-4 divide-y-8 h-[170px] py-2"
             src={logoimg}
           />
         </div>
@@ -36,9 +36,12 @@ const Header = () => {
           <p className=" cursor-pointer text-white text-4xl pr-4 flex-col flex-center">
             <BsCart2 />
           </p>
-          <button className="btn w-[100%] md:w-[300px] lg:w-[250px] hover:text-white transition-colors duration-700 normal-text text-center text-black">
+          <Link to={'/regarvTable'} >
+            <button className="btn w-[100%] md:w-[300px] lg:w-[250px] hover:text-white transition-colors duration-700 normal-text text-center text-black">
             Reservation
           </button>
+          </Link>
+        
           {/*  */}
           <div className=" hidden md:flex px-10 md:w-[300px] lg:hidden my-4">
           <div className=" h-[54px] w-[100%] normal-text mx-auto border-[1px] border-[#E1B168] flex-center">

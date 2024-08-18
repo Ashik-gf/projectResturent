@@ -58,6 +58,11 @@ import safe11 from '../assets/safe/3.svg';
 import safe12 from '../assets/safe/safe1.svg';
 
 // icon
+import sand from '../assets/Icon (12).svg';
+import track from '../assets/Track Icon.svg';
+import quality from '../assets/Group 51.svg';
+import service from '../assets/ICon (13).svg';
+
 
 import light from '../assets/light.svg';
 import quate1 from '../assets/qqqq.svg';
@@ -90,8 +95,20 @@ import store37 from "../assets/Photo (37).svg"
 import store38 from "../assets/Photo (38).svg"
 import store39 from "../assets/Photo (39).svg"
 import store40 from "../assets/Photo (38).svg"
+import book from "../assets/Photo (41).svg"
+import chose from "../assets/Photo (42).svg"
+import mainBlog1 from "../assets/Image (45).svg"
+import mainBlog2 from "../assets/Photo (43).svg"
+import mainBlog3 from "../assets/Photo (44).svg"
+import mainBlog4 from "../assets/Photo (45).svg"
+import visitUs1 from "../assets/Photo (46).svg"
+import visitUs2 from "../assets/Photo (47).svg"
 
-
+import call from "../assets/Call (1).svg"
+import location from "../assets/Location (1).svg"
+import mail from "../assets/Vector (3).svg"
+import email from "../assets/Vector (4).svg"
+import callIcon from "../assets/Vector (5).svg"
 import rbanr from "../assets/reservationBanner.svg"
 // gallary
 export const gallary1 = pic1;
@@ -132,6 +149,15 @@ export const icon06= icon6
 export const icon07= icon7
 export const promoBnr= prom 
 export const reservationBanner= rbanr 
+export const booking=book
+export const choseUs=chose
+export const call1 = call
+export const location1=location
+export const mail1=mail
+export const visit1=visitUs1
+export const visit2=visitUs2
+export const gmail =email
+export const calli =callIcon
 
 
 
@@ -363,6 +389,44 @@ export const workingHour = [
     details:'Capitalize on low-hanging fruit to identify a ballpark value added matrix economically and the creative activity to beta test override the food quality.'
   },
  ]
+ export const mainBlog =[
+  {
+    id:1,
+    photo:mainBlog1,
+    title:'RECIPES',
+    date:'Feb 22, 2022',
+    subject:'Elegant Dessert: 10 Tips How to Make It at Home',
+    details:'Enthusiastically mesh long-term high-impact infrastructures vis efficient customer service professionally fashion wireless rather than prospective experiences nergistically myocardinate clicks procedures whereas manufactured products.',
+    moreDetails:'Uniquely matrix economically sound value through cooperative technology. Competently parallel task fully researched data and enterprise process improvements. Collaboratively expedite quality manufactured products via client-focused results quickly communicate enabled technology and turnkey leadership skills. Uniquely enable accurate supply chains rather than friction technology.'
+  },
+  {
+    id:2,
+    photo:mainBlog2,
+    title:'RECIPES',
+    date:'Feb 22, 2022',
+    subject:'Elegant Dessert: 10 Tips How to Make It at Home',
+    details:'Enthusiastically mesh long-term high-impact infrastructures vis efficient customer service professionally fashion wireless rather than prospective experiences nergistically myocardinate clicks procedures whereas manufactured products.',
+    moreDetails:'Uniquely matrix economically sound value through cooperative technology. Competently parallel task fully researched data and enterprise process improvements. Collaboratively expedite quality manufactured products via client-focused results quickly communicate enabled technology and turnkey leadership skills. Uniquely enable accurate supply chains rather than friction technology.'
+  },
+  {
+    id:3,
+    photo:mainBlog3,
+    title:'RECIPES',
+    date:'Feb 22, 2022',
+    subject:'Elegant Dessert: 10 Tips How to Make It at Home',
+    details:'Enthusiastically mesh long-term high-impact infrastructures vis efficient customer service professionally fashion wireless rather than prospective experiences nergistically myocardinate clicks procedures whereas manufactured products.',
+    moreDetails:'Uniquely matrix economically sound value through cooperative technology. Competently parallel task fully researched data and enterprise process improvements. Collaboratively expedite quality manufactured products via client-focused results quickly communicate enabled technology and turnkey leadership skills. Uniquely enable accurate supply chains rather than friction technology.'
+  },
+  {
+    id:4,
+    photo:mainBlog4,
+    title:'RECIPES',
+    date:'Feb 22, 2022',
+    subject:'Elegant Dessert: 10 Tips How to Make It at Home',
+    details:'Enthusiastically mesh long-term high-impact infrastructures vis efficient customer service professionally fashion wireless rather than prospective experiences nergistically myocardinate clicks procedures whereas manufactured products.',
+    moreDetails:'Uniquely matrix economically sound value through cooperative technology. Competently parallel task fully researched data and enterprise process improvements. Collaboratively expedite quality manufactured products via client-focused results quickly communicate enabled technology and turnkey leadership skills. Uniquely enable accurate supply chains rather than friction technology.'
+  },
+ ]
  export const freshProducts =[
   {
     id:1,
@@ -565,4 +629,26 @@ export const store=[
     photo:store39,
   },
   
+]
+export const choseItem =[
+  {
+    id:1,
+    title:'Fresh Food',
+    photo:sand
+  },
+  {
+    id:2,
+    title:'Fast Delivery',
+    photo:track
+  },
+  {
+    id:3,
+    title:'Qualty Maintain',
+    photo:quality
+  },
+  {
+    id:4,
+    title:'24/7 Service',
+    photo:service
+  },
 ]

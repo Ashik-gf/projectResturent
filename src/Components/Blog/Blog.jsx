@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../uitls/Button/Button";
 import { blogItem } from "../../Constant";
 
-const Blog = () => {
+const Blogs = () => {
   return (
     <section className=" max-w-7xl mx-auto  flex flex-row justify-center items-center p-16  ">
       <div className=" h-full w-full">
@@ -52,4 +52,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blogs;
