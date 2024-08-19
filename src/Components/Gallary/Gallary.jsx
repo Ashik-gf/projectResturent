@@ -6,12 +6,12 @@ const Gallary = () => {
   return (
     <section className=' max-w-7xl h-full py-32 bg-white'>
         <Button className={''} title={'Galary'} subject={'What We Make'} />
-        <div className="flex-center w-full h-[500px] gap-2 border-2">
+        <div className=" flex flex-col sm:flex-row sm:justify-center sm:items-center w-full h-full sm:h-[500px] gap-2">
             <aside className=' flex flex-col justify-center items-center gap-2'>
-                <div className="h-[290px] w-[300px] overflow-hidden">
-                <img className=' ' src={img1} />
+                <div className="h-[290px] w-full sm:w-[300px] overflow-hidden">
+                <img className='w-full ' src={img1} />
                 </div>
-                <img className=' h-[200px]' src={img2} />
+                <img className=' h-[200px] w-full' src={img2} />
             </aside>
             <div className="flex justify-center items-center">
                 <img className=' h-[500px]' src={img3} />

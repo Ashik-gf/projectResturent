@@ -2,67 +2,50 @@ import React, { useState } from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 import { timage } from '../../Constant'; // Assuming timage is an image URL
 
-const Slider2 = () => {
+const Slider2 = ({  textItems = [], personName = "Daniyal Sppra", personTitle = "Designer" }) => {
   const [sliderNumber, setSliderNumber] = useState(1);
-  const imageCount = 3; // Assuming there are 3 images (adjust based on actual number)
-
+  const images = [1,2,3];
+  const imageCount = images.length || textItems.length;
   const rightBtn = () => {
-    if (sliderNumber < imageCount) {
-      setSliderNumber(sliderNumber + 1);
-    } else {
-      setSliderNumber(1);
-    }
+    setSliderNumber((sliderNumber % imageCount) + 1);
   };
 
   const leftBtn = () => {
-    if (sliderNumber > 1) {
-      setSliderNumber(sliderNumber - 1);
-    } else {
-      setSliderNumber(imageCount);
-    }
+    setSliderNumber((sliderNumber - 2 + imageCount) % imageCount + 1);
   };
 
   return (
-    <div className="container  flex justify-center items-center gap-8 w-full h-[300px] rounded-md">
-      <aside className="h-32 w-32 flex-center">
-        <p onClick={leftBtn} className="left-btn cursor-pointer text-orange text-[80px]">
+    <div className="container flex justify-between items-center gap-8 w-full h-[300px] sm:h-[350px] rounded-md sm:px-16">
+      {/* Left Button */}
+      <aside className="h-10 w-10 sm:h-20 sm:w-20 flex justify-center items-center">
+        <p onClick={leftBtn} className="cursor-pointer text-orange text-[20px] sm:text-[40px]">
           <IoIosArrowBack />
         </p>
       </aside>
 
       {/* Slider */}
-      <div className="frame relative h-[300px] w-[605px] overflow-hidden rounded-md">
-        <div className={`slider h-full w-[${imageCount * 600}px] flex items-center`}>
-          {Array(imageCount)
-            .fill(null)
-            .map((_, index) => (
-              <div key={index} className="image w-[600px]">
-                <div className="w-[600px]">
-                  <p className="text-center font-cormo italic font-normal text-xl text-white leading-9">
-                    <span>{index + 1}</span>
-                    "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy   
- foster collaborative thinking further overall value proposition organically   
- friendly."
-                  </p>
-                  <div className="flex flex-col justify-center items-center gap-2 py-2 text-white">
-                    <img className="h-[80px]" src={timage} alt="Image description" />
-                    <h1 className="font-cormo text-[22px]">Daniyal Sppra</h1>
-                    <p className="text-orange font-jos text-md">Designer</p>
-                  </div>
+      <div className="relative h-full w-full sm:w-[600px]  overflow-hidden rounded-md">
+        <div className="slider flex items-center transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${(sliderNumber - 1) * 100}%)` }}>
+          {textItems.map((text, index) => (
+            <div key={index} className="flex-shrink-0 w-full sm:w-[600px] px-4 sm:px-0">
+              <div className=" p-4 rounded-md bg-gray-800">
+                <p className="font-cormo italic font-normal text-[13px] sm:text-xl text-white leading-5 sm:leading-9">
+                  <span>{index + 1}</span> {text}
+                </p>
+                <div className="flex flex-col justify-center items-center gap-2 py-2 text-white">
+                  <img className="h-[60px] sm:h-[80px]" src={timage} alt="Image description" />
+                  <h1 className="font-cormo text-[18px] sm:text-[22px]">{personName}</h1>
+                  <p className="text-orange font-jos text-sm sm:text-md">{personTitle}</p>
                 </div>
               </div>
-            ))}
-          <style jsx>{`
-            .slider {
-              transform: translateX(-${(sliderNumber - 1) * 600}px);
-              transition: transform 0.5s ease-in-out;
-            }
-          `}</style>
+            </div>
+          ))}
         </div>
       </div>
 
-      <aside className="h-32 w-32 flex-center">
-        <p onClick={rightBtn} className="right-btn cursor-pointer text-orange leading-loose text-[80px] rotate-180">
+      {/* Right Button */}
+      <aside className="h-10 w-10 sm:h-20 sm:w-20 flex justify-center items-center">
+        <p onClick={rightBtn} className="cursor-pointer text-orange text-[20px] sm:text-[40px] rotate-180">
           <IoIosArrowBack />
         </p>
       </aside>

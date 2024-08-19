@@ -9,8 +9,8 @@ const Team = () => {
 <div className=" flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 px-16">
     {
         team.map(item=>(
-            <div key={item.id} className="">
-                    <img className=' cursor-pointer h-[400px]' src={item.photo} />
+            <div key={item.id} className=" h-[400]">
+                    <img className=' w-full cursor-pointer h-[350px]' src={item.photo} />
             </div>
         ))
     }

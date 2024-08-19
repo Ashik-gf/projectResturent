@@ -1,20 +1,16 @@
 import React from 'react'
 import { clientSay, light1 } from '../../Constant'
+import LeftSideButton from '../../uitls/Button/LeftSideButton/LeftSideButton'
 
 const ClientSay = () => {
   return (
     <section className=' max-w-7xl bg-[#292E36] text-white h-full sm:pl-[200px] py-12 sm:py-[80px]  flex flex-col'>
-        <div className="testemunial py-4 px-12 sm:px-4">
-            <button className=' header-border border-2 font-jos text-[15px]' >
-            Testimonial
-            </button>
-            <h1 className=' text-[40px] font-extrabold font-cormo'>
-            What our clients say
-            </h1>
-            <p className=' text-[15px] font-normal text-[#FFFFFF]'>
-            We love to hear from customers, so please leave a comment or say hello in an email.
-            </p>
-        </div>
+        <LeftSideButton
+        className={'text-white'}
+         title={' Testimonial'}
+        subject={'  What our clients say'} 
+        paragraph={'We love to hear from customers, so please leave a comment or say hello in an email.'}/>
+        
         <div className=" p-4 sm:pb-20">
            <div className=" flex flex-col items-center gap-4 sm:flex sm:flex-row sm:justify-evenly  ">
             {

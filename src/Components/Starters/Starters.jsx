@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { starters, strts } from "../../Constant";
 
 const Starters = () => {
+  const [seeMore, setSeeMore]=useState(false)
+  const handelSeeMore = () =>{
+    setSeeMore(!seeMore)
+  }
   return (
     <section className=" max-w-7xl mx-auto flex flex-col sm:flex-row h-full sm:px-16 py-16 sm:py-4">
       {/* left side */}
@@ -13,14 +17,14 @@ const Starters = () => {
         />
       </aside>
       {/* Right side */}
-      <aside className=" w-full sm:w-7/12 h-full px-4">
+      <aside className= {`w-full sm:w-7/12 h-full px-4 ${seeMore?' transition-all duration-700 -translate-y-1 case-in':''}`} >
         {/* starter */}
         <div className=" w-full h-full pb-8">
           <h1 className=" text-[40px] font-cormo font-extrabold">Starters</h1>
           <div className=" flex flex-col gap-10 py-4 ">
-            {starters.map((item) => (
+            {starters.slice(0, seeMore ? starters.leghth : 4).map((item) => (
               <div
-                className=" flex flex-col sm:flex-row  justify-between gap-8"
+                className=" transition-transform duration-500 delay-500 flex flex-col sm:flex-row  justify-between gap-8"
                 key={item.id}
               >
                 <div className="flex gap-4 items-center">
@@ -45,7 +49,7 @@ const Starters = () => {
             ))}
           </div>
         </div>
-        <button type="button" className=" btn-border text-orange py-4">
+        <button onClick={handelSeeMore} type="button" className=" btn-border text-orange py-4">
                 See All Dishes
         </button>
       </aside>

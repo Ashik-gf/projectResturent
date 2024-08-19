@@ -10,6 +10,7 @@ import p9 from '../assets/p9.svg';
 import p10 from '../assets/p10.svg';
 import p13 from "../assets/Photo (13).svg"
 import p14 from "../assets/Photo (14).svg"
+import mylogo from "../assets/resLogo.png"
 
 
 import c1 from '../assets/c1.svg';
@@ -158,6 +159,7 @@ export const visit1=visitUs1
 export const visit2=visitUs2
 export const gmail =email
 export const calli =callIcon
+export const logo =mylogo
 
 
 
@@ -194,7 +196,7 @@ export const workingHour = [
     time: "8.00Am - 6.00 Pm",
   },
 ];
- export const   starters = [
+ export const starters = [
 {
   id:1,
   photo:p1,
@@ -224,8 +226,22 @@ export const workingHour = [
   details:'Candied Jerusalem artichokes, truffle',
   price:'$50'
 },
+{
+  id:5,
+  photo:p4,
+  title:"Tomato Bruschetta",
+  details:'Candied Jerusalem artichokes, truffle',
+  price:'$50'
+},
+{
+  id:6,
+  photo:p4,
+  title:"Tomato Bruschetta",
+  details:'Candied Jerusalem artichokes, truffle',
+  price:'$50'
+},
  ]
- export const   mainDesh = [
+ export const mainDesh = [
 {
   id:1,
   photo:p5,
@@ -463,25 +479,25 @@ export const workingHour = [
  export const team =[
   {
     id:1,
-    photo:safe1,
+    photo:safe7,
     name:'Avroko',
     job:'Master Chef'
   },
   {
     id:2,
-    photo:safe2,
+    photo:safe8,
     name:'Evan Mattew',
     job:'Master Chef'
   },
   {
     id:3,
-    photo:safe3,
+    photo:safe9,
     name:'Diane	Clarkson',
     job:'Master Chef'
   },
   {
     id:4,
-    photo:safe4,
+    photo:safe10,
     name:'Dan Rafalin',
     job:'Assistant Chef'
   },

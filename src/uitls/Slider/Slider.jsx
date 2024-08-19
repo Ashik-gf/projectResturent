@@ -24,10 +24,10 @@ const Slider = () => {
               </p>
             </aside>
             {/* Card */}
-            <div className= {`${next} w-[500px] flex flex-row justify-between overflow-hidden`} >
+            <div className= {`${next} w-full sm:w-[500px] flex flex-row justify-between overflow-hidden`} >
             <div className=" w-full border-2 flex flex-row justify-between overflow-hidden">
-              <div className=" w-[500px] border-2">
-                <p className=" text-center font-cormo italic font-normal text-xl text-white leading-9">
+              <div className=" w-full sm:w-[500px] border-2">
+                <p className=" text-center font-cormo italic font-normal text-[12px] sm:text-xl text-white">
                   "Leverage agile frameworks to provide a robust synopsis for
                   high level overviews. Iterative approaches to corporate
                   strategy foster collaborative thinking further overall value
@@ -56,6 +56,7 @@ const Slider = () => {
                 </div>
               </div>
             </div>
+            
             </div>
             {/* right */}
             <aside onClick={handelNext} className=" h-32 w-32 flex-center">

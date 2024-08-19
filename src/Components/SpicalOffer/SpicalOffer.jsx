@@ -58,7 +58,7 @@ const SpicalOffer = () => {
             }
         </div>
       </div>
-      <div className="w-full flex justify-center items-center sm:py-20">
+      <div className="w-full flex justify-center items-center py-8 sm:py-20">
         <button className=" btn-border">
             View All dishes
         </button>
