@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import offerPhotos from '../../assets/offers.svg';
 import p1 from '../../assets/p1.svg'
 import { deshirt, mainDesh, starters } from '../../Constant';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap';
 
 const Offer = () => {
+  const offerRef = useRef(null)
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(offerRef.current, 
+      {  x: "-30px",
+      duration: 1,
+      ease: "bounce.inOut", },
+       {
+        x: 0,
+        duration: 5,
+        ease: "power3.out",
+        scrollTrigger: { 
+          trigger: offerRef.current, 
+          start: "top center",
+           end: "bottom 10%",
+           scrub:true,  } 
+      });
+      
+
+  }, []);
   return (
-    <section className=' max-w-7xl mx-auto flex flex-col sm:flex-row h-full sm:px-16 sm:py-4'>
+    <section  className=' max-w-7xl mx-auto flex flex-col sm:flex-row h-full sm:px-16 sm:py-4'>
         {/* left side */}
-        <aside className='flex flex-col gap-3 w-full sm:w-4/12 h-full px-4 py-2'>
+        <aside ref={offerRef} className='flex flex-col gap-3 w-full sm:w-4/12 h-full px-4 py-2'>
             <h1 className=' font-jos text-lg font-normal'>Menu</h1>
             <h1 className=' font-cormo text-3xl font-semibold'>Try Our Special Offers</h1>
             <p className=' text-justify flex flex-nowrap text-[20px] font-jos'>
@@ -28,7 +50,7 @@ const Offer = () => {
                   className=' flex flex-col sm:flex-row  justify-between'
                   key={item.id}>
                   <div className="flex gap-4 items-center">
-                  <img className=' h-[128px] w-[85px]' src={item.photo} />
+                  <img className='img h-[128px] w-[85px]' src={item.photo} />
                     <div className="">
                       <h1 className=' font-cormo font-extrabold text-2xl text-[#292E36]'>{item.title}</h1>
                       <p className=' font-jos font-normal text-[20px] text-left text-[#555555] '>{item.details}</p>

@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "../../uitls/Button/Button";
 import { backgroundImage, bgPhoto, offerBanner, populerDish } from "../../Constant";
+import { gsap } from "gsap";
 
 const SpicalOffer = () => {
+  useEffect(() => {
+    gsap.fromTo(".bigOffer, .ptex, .bnr", {
+      opacity: 0,
+      x: -400,
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: 3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".bigOffer",
+        start: "top 70%",
+        end: "bottom 90%",
+
+        scrub: true,
+    },
+    });
+  }, [])
   return (
     <section className="  max-w-7xl px-16 mx-auto flex flex-col justify-center w-full h-full md:w-full sm:w-[1200px] lg:pt-[150px] ">
       {/* Offer */}
-      <div className=" h-full flex flex-col justify-center py-4  ">
+      <div className=" bigOffer h-full flex flex-col justify-center py-4  ">
         <header className=" p-8">
           <Button
             title=" OFFER"
@@ -14,7 +33,7 @@ const SpicalOffer = () => {
             paragraph="Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using  making"
           />
         </header>
-        <div className=" py-4 flex flex-col sm:flex sm:flex-row justify-between gap-4">
+        <div className=" photo py-4 flex flex-col sm:flex sm:flex-row justify-between gap-4">
           {/* 1st part */}
           <div className="flex bg-[#c7eaf2]">
             <div

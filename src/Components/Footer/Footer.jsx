@@ -16,9 +16,9 @@ const iconList = [
 const Footer = () => {
   return (
     <footer className=" max-w-7xl bg-[#292E36] py-4 ">
-     <div className="px-16">
+     <div className=" sm:px-16 md:px-4">
        {/* Logo, Icon */}
-       <div className=" flex flex-col justify-between gap-4 items-center lg:flex-row  ">
+       <div className=" flex flex-col justify-between gap-4 items-center lg:flex-row ">
         <a className=" cursor-pointer text-white underline font-jos">
           Instagram Feed
         </a>
@@ -40,23 +40,27 @@ const Footer = () => {
       </div>
       {/* containt */}
       {/* Make Sure that Latter spaceing */}
-      <div className=" py-4 flex flex-col-reverse justify-center items-center gap-4 lg:grid grid-cols-12 text-xl font-normal">
-        <div className="col-span-4 flex ">
-          {
-            contact.map((cont)=>(
-             <div className=" text-white flex flex-col justify-start gap-4">
-              <h1 className=" tracking-[4px] text-[20px] header-border text-center cursor-pointer">{cont.title}</h1>
-              <div className=" flex flex-col justify-start gap-[3px]">
-                <p className="cursor-pointer">{cont.add}</p>
-                <p className="cursor-pointer"><span className="text-orange">Call</span>{cont.call}</p>
-                <p className="text-orange cursor-pointer">{cont.email}</p>
-              </div>
-             </div>
-            ))
-          }
+      <div className=" sm:grid grid-cols-12 py-4 flex flex-col-reverse gap-4   text-xl font-normal px-2 ">
+        {/* contact */}
+        <div className="col-span-4 ">
+        <div className=" flex-col-center">
+          <div >
+           <h1 className="text-[20px] header-border text-white cursor-pointer mb-4 tracking-[3px]">Contact</h1> 
+          </div>
+            <ul className=" leading-10">
+              {
+                contact.map((work, index)=>(
+                <li key={index}>
+                <p className="text-white"><span className=" text-orange mr-2"></span>{work.add}</p>
+                <p className="text-white"><span className=" text-orange mr-2">Email:</span>{work.email}</p>
+                <p className="text-white"><span className=" text-orange mr-2">Dail:</span>{work.call}</p>
+                </li>))
+              }
+            </ul>
+        </div>
         </div>
         {/* Search option */}
-        <div className="col-span-4 text-white">
+        <div className=" col-span-4 text-white ">
           <div className="flex-col-center leading-tight">
           <h1>Join Our Mailing list for Updates</h1>
           <p>,</p>
@@ -75,7 +79,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Working Hour */}
-        <div className="col-span-4 flex-col-center">
+        <div className=" sm:col-span-4 flex-col-center ">
           <div >
            <h1 className="text-[20px] header-border text-white cursor-pointer mb-4">Working Hours</h1> 
           </div>

@@ -24,14 +24,14 @@ const Header = () => {
             Call-01773122981
           </div>
         </div>
-{/* logo */}
+
         <div className="col-span-1 flex-center py-4 ">
           <img
             className=" border-[1px] border-dashed divide-x-4 divide-y-8 h-[170px] py-2"
             src={logoimg}
           />
         </div>
-{/* lg */}
+
         <div className=" px-10 lg:px-0 col-span-1 w-full flex items-center justify-end">
           <p className=" cursor-pointer text-white text-4xl pr-4 flex-col flex-center">
             <BsCart2 />

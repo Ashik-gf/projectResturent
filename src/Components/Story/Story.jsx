@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegClock } from "react-icons/fa6";
 import photo1 from "../../assets/story.svg";
-const Story = () => {
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+const Story = React.forwardRef((props, ref)=> {
+const storyRef = useRef(null)
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.fromTo(storyRef.current, 
+      { opacity: 0, y: 50 }, { opacity: 1, 
+        duration:3, 
+        y: 0, 
+        scrollTrigger: { 
+          trigger: storyRef.current, 
+          start: "top 60%",
+           end: "bottom 10%",
+     
+           scrub:true,
+          troggleActions:"restart, resume, reverse, pause"  } 
+      });
+  }, []);
+ 
   return (
-    <section className=" max-w-7xl h-full py-8 sm:py-12 bg-orange2 flex-center">
+    <section ref={storyRef} className=" max-w-7xl h-full py-8 sm:py-12 bg-orange2 flex-center">
       <div className=" w-full h-full pt-12 px-16 ">
         {/* contact story menu */}
         <div className=" flex flex-col py-4 sm:flex sm:flex-row gap-4 px-4">
@@ -48,7 +68,7 @@ const Story = () => {
           </div>
         </div>
         {/* story */}
-        <div className="  flex flex-col gap-4 items-center p-4 sm:flex-row sm:justify-between w-full h-full sm:h-[400px]">
+        <div className="imgBox  flex flex-col gap-4 items-center p-4 sm:flex-row sm:justify-between w-full h-full sm:h-[400px]">
           <div className=" sm:w-1/2 flex justify-between items-center">
             <img className=" w-[400px] lg:w-[400px] lg:h-[335px]" src={photo1} />
           </div>
@@ -78,10 +98,11 @@ const Story = () => {
             <h1 className=" text-xl font-bold">Josefine</h1>
            </div>
           </div>
+
         </div>
       </div>
     </section>
   );
-};
+})
 
 export default Story;
